@@ -1,0 +1,72 @@
+
+# POST http://localhost:4000/api/songs/add
+# Content-Type: application/json
+# Fields:
+#     name: test name
+#     desc: test desc
+#     album: test album
+# Files:
+#     image: C:\Users\katha\OneDrive\Desktop\VS Code\Spotify-fullstack\Spotify-clone\src\assets\frontend-assets\img9.jpg
+#     audio: C:\Users\katha\OneDrive\Desktop\VS Code\Spotify-fullstack\Spotify-clone\src\assets\frontend-assets\song2.mp3
+
+
+### Add Song
+POST http://localhost:4000/api/songs/add
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="name"
+
+test name
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="desc"
+
+test desc
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="album"
+
+test album
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="img9.jpg"
+Content-Type: image/jpeg
+
+< ./Spotify-clone/src/assets/frontend-assets/img9.jpg
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="audio"; filename="song2.mp3"
+Content-Type: audio/mpeg
+
+< ./Spotify-clone/src/assets/frontend-assets/song2.mp3
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+
+
+
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="name"
+
+test name 2
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="desc"
+
+test desc 2
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="album"
+
+test album 2
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="img9.jpg"
+Content-Type: image/jpeg
+
+< ./Spotify-clone/src/assets/frontend-assets/img9.jpg
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="audio"; filename="song2.mp3"
+Content-Type: audio/mpeg
+
+< ./Spotify-clone/src/assets/frontend-assets/song2.mp3
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+
+
+GET http://localhost:4000/api/songs/list
